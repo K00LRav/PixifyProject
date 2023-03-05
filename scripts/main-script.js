@@ -48,4 +48,63 @@ const imageSets = [
       ]
     }
 
-  ];
+  ]
+
+
+//A function that will take the list of users and add it to a div
+const displayUsers=(listOfUsers)=>{
+  const photoContainer = document.querySelector(".all-users")
+  const allUsers=listOfUsers.map(item =>{
+    return `<a class="users" href="more-images.html?id=${item.name}">
+    <img src=${item.images} alt=${item.title} class="user-image" />
+    <div class="user-info">
+      <p>${item.title} - ${item.name}</p>
+      <p class = "see-more">see more</p>
+    </div>
+    </a>`;
+  })
+    photoContainer.innerHTML = allUsers.join("");
+}
+
+window.onload = function (){
+  displayUsers(imageSets);
+}``
+
+
+const submitBtn = document.querySelector("#form-btn");
+
+submitBtn.addEventListener("click", (e)=>{
+  e.preventDefault();
+
+  //get values from the form
+const name =  document.querySelector('input[name="name"]').value;
+const title =  document.querySelector('input[name="title"]').value;
+const imageUrl1 =  document.querySelector('input[name="url1"]').value;
+const imageUrl2 =  document.querySelector('input[name="url2"]').value;
+const imageUrl3 =  document.querySelector('input[name="url3"]').value;
+const imageUrl4 =  document.querySelector('input[name="url4"]').value;
+const imageUrl5 =  document.querySelector('input[name="url5"]').value;
+
+
+//create a new div with form info
+const addedImage = document.createElement("a");
+addedImage.innerHTML = 
+`<a class="users">
+<img src=${imageUrl1} class="user-image">
+      <div class="user-info">
+        <p>${title} - ${name}</p>
+    </div>
+</a>`
+    const newImageDiv = document.querySelector(".all-users");
+    newImageDiv.insertBefore(addedImage,newImageDiv.firstChild);
+
+    //clear forms input value
+  document.querySelector('input[name="name"]').value = "";
+  document.querySelector('input[name="title"]').value = "";
+  document.querySelector('input[name="url1"]').value = "";
+  document.querySelector('input[name="url2"]').value = "";
+  document.querySelector('input[name="url3"]').value = "";
+  document.querySelector('input[name="url4"]').value = "";
+  document.querySelector('input[name="url5"]').value = "";
+  document.querySelector("#form-select").value = "";
+});

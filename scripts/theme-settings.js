@@ -2,7 +2,7 @@
 
 const themeButton=document.querySelector(".theme-btn")
 const toggleTheme=()=>{
-  // alert('works')
+
   const body = document.querySelector("body")
   const div = document.querySelector("div")
 

@@ -80,7 +80,6 @@ main{
     font-size: 16px;
     display: flex;
     justify-content: space-between;
-
 }
 
 .user-image{
@@ -92,5 +91,25 @@ main{
 .see-more{
     font-size: 10px;
     font-family: 'Montserrat';
-    align-self:center
+    align-self:center;
+}
+
+.new-user-image{
+    width: 345px;
+    height: 193px;
+    border-radius: 8px;
+}
+
+.new-user-info{
+    font-family: 'Montserrat';
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+}
+
+.seemore{
+    font-size: 10px;
+    font-family: 'Montserrat';
+    align-self:center;
 }

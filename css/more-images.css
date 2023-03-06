@@ -10,7 +10,7 @@
 }
 
 
-.previous-btn{
+#previous-btn{
     border-radius: 60px;
     padding: 10px 40px;
     background-color: #2A3B49;
@@ -20,12 +20,12 @@
     color: #7BFFE9;
 }
 
-.previous-btn:hover{
+#previous-btn:hover{
     background-color: #7BFFE9;
     color: #2A3B49;
 }
 
-.next-btn{
+#next-btn{
     border-radius: 60px;
     padding: 10px 40px;
     background-color: #2A3B49;
@@ -35,7 +35,7 @@
     color: #7BFFE9;
 }
 
-.next-btn:hover{
+#next-btn:hover{
     background-color: #7BFFE9;
     color: #2A3B49;
 }
